@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #007bff;
+    background-color: #004085;
     color: white;
     padding: 20px;
     text-align: center;
@@ -31,11 +31,9 @@ nav ul li a {
 }
 
 #banner {
-    background-image: url('https://via.placeholder.com/1200x400');
-    background-size: cover;
-    background-position: center;
+    background-color: #007bff;
     color: white;
-    padding: 50px 20px;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -44,37 +42,42 @@ nav ul li a {
     border: none;
     color: black;
     padding: 10px 20px;
-    cursor: pointer;
     font-size: 1.2em;
+    cursor: pointer;
 }
 
 .planos-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .plano {
     border: 1px solid #ccc;
     padding: 20px;
     background-color: #fff;
-    width: 200px;
+    width: 250px;
     text-align: center;
     border-radius: 8px;
 }
 
 .plano.destaque {
-    background-color: #e9ecef;
+    background-color: #e2e3e5;
     border: 2px solid #007bff;
 }
 
-.plano button {
+button {
     background-color: #007bff;
-    border: none;
     color: white;
+    border: none;
     padding: 10px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 
 footer {
