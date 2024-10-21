@@ -1,13 +1,52 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const infoButton = document.createElement("button");
-    infoButton.textContent = "Clique para mais informações";
-    infoButton.style.padding = "10px 20px";
-    infoButton.style.fontSize = "1em";
-    infoButton.style.marginTop = "20px";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
 
-    document.body.appendChild(infoButton);
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 0;
+}
 
-    infoButton.addEventListener("click", function() {
-        alert("Este site é um projeto acadêmico de demonstração de TV por IP, feito exclusivamente para a escola.");
-    });
-});
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+#hero {
+    background-color: #e9ecef;
+    padding: 50px 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
