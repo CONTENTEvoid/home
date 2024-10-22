@@ -16,28 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Animação ao Rolar
-    const elements = document.querySelectorAll(".reveal");
-    
-    function revealOnScroll() {
-        const windowHeight = window.innerHeight;
-        const revealPoint = 150;
-
-        elements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-
-            if (elementTop < windowHeight - revealPoint) {
-                element.classList.add("active");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", revealOnScroll);
-
-    // Slider
+    // Slider e outras animações
     let slideIndex = 0;
-    showSlides();
-
     function showSlides() {
         const slides = document.getElementsByClassName("slide");
         for (let i = 0; i < slides.length; i++) {
@@ -48,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex - 1].style.display = "block";
         setTimeout(showSlides, 5000);
     }
+    showSlides();
 
     window.changeSlide = function(n) {
         slideIndex += n;
@@ -60,21 +41,39 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex - 1].style.display = "block";
     };
 
-    // Carregamento de Página com Fade In
+    // Efeito de Fade In
     document.body.style.opacity = 0;
     document.body.style.transition = "opacity 1.5s ease";
     window.addEventListener("load", function() {
         document.body.style.opacity = 1;
     });
 
-    // Efeito de Parallax em Imagens de Fundo
-    window.addEventListener("scroll", function() {
-        const parallaxElements = document.querySelectorAll(".parallax");
-        parallaxElements.forEach(element => {
-            let speed = element.getAttribute("data-speed");
-            element.style.transform = `translateY(${window.scrollY * speed}px)`;
-        });
-    });
-
-    revealOnScroll();
+    // Efeito de Digitação no Título
+    const typedText = document.querySelector(".typed-text");
+    if (typedText) {
+        const textArray = typedText.getAttribute("data-text").split(",");
+        let arrayIndex = 0;
+        let charIndex = 0;
+        function type() {
+            if (charIndex < textArray[arrayIndex].length) {
+                typedText.textContent += textArray[arrayIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 150);
+            } else {
+                setTimeout(erase, 2000);
+            }
+        }
+        function erase() {
+            if (charIndex > 0) {
+                typedText.textContent = textArray[arrayIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 100);
+            } else {
+                arrayIndex++;
+                if (arrayIndex >= textArray.length) arrayIndex = 0;
+                setTimeout(type, 1500);
+            }
+        }
+        type();
+    }
 });
