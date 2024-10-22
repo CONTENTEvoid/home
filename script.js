@@ -114,14 +114,22 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll();
 
-// Animação nos Botões ao Passar o Mouse
-const buttons = document.querySelectorAll("button");
-buttons.forEach(button => {
-    button.addEventListener("mouseover", function() {
-        button.style.transition = "all 0.3s ease";
-        button.style.transform = "scale(1.1)";
+// Adição de Modal para Promoções Especiais
+const modal = document.getElementById("promo-modal");
+const closeModalButton = document.getElementById("close-modal");
+
+if (modal && closeModalButton) {
+    setTimeout(function() {
+        modal.style.display = "block";
+    }, 7000); // Mostrar modal após 7 segundos
+
+    closeModalButton.addEventListener("click", function() {
+        modal.style.display = "none";
     });
-    button.addEventListener("mouseout", function() {
-        button.style.transform = "scale(1)";
+
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
     });
-});
+}
