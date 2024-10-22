@@ -67,5 +67,14 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.style.opacity = 1;
     });
 
+    // Efeito de Parallax em Imagens de Fundo
+    window.addEventListener("scroll", function() {
+        const parallaxElements = document.querySelectorAll(".parallax");
+        parallaxElements.forEach(element => {
+            let speed = element.getAttribute("data-speed");
+            element.style.transform = `translateY(${window.scrollY * speed}px)`;
+        });
+    });
+
     revealOnScroll();
 });
