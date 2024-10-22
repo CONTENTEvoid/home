@@ -98,3 +98,30 @@ window.addEventListener("scroll", function() {
         element.style.transform = `translateY(${window.scrollY * speed}px)`;
     });
 });
+
+// Animação ao Rolar
+const revealElements = document.querySelectorAll(".reveal");
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    revealElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const revealPoint = 150;
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add("active");
+        }
+    });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+// Animação nos Botões ao Passar o Mouse
+const buttons = document.querySelectorAll("button");
+buttons.forEach(button => {
+    button.addEventListener("mouseover", function() {
+        button.style.transition = "all 0.3s ease";
+        button.style.transform = "scale(1.1)";
+    });
+    button.addEventListener("mouseout", function() {
+        button.style.transform = "scale(1)";
+    });
+});
