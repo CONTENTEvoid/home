@@ -85,4 +85,11 @@ document.addEventListener("DOMContentLoaded", function() {
         carrosselItems[carrosselIndex].classList.add("active");
         carrosselIndex++;
         if (carrosselIndex >= carrosselItems.length) {
-   
+            carrosselIndex = 0;
+        }
+        setTimeout(showCarrosselItem, 3000);
+    }
+    if (carrosselItems.length > 0) {
+        showCarrosselItem();
+    }
+});
