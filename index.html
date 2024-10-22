@@ -20,12 +20,26 @@
         </nav>
     </header>
 
-    <section id="banner">
-        <h2>Assine Agora com 7 Dias Grátis de Teste!</h2>
-        <button onclick="showPromotion()">Ver Promoções</button>
+    <section id="slider">
+        <div class="slider-container">
+            <div class="slide fade">
+                <img src="https://via.placeholder.com/800x300?text=Promoção+1" alt="Promoção 1">
+                <div class="text">Assine com 20% de Desconto!</div>
+            </div>
+            <div class="slide fade">
+                <img src="https://via.placeholder.com/800x300?text=Promoção+2" alt="Promoção 2">
+                <div class="text">Teste Grátis por 7 Dias!</div>
+            </div>
+            <div class="slide fade">
+                <img src="https://via.placeholder.com/800x300?text=Promoção+3" alt="Promoção 3">
+                <div class="text">Plano Anual com 2 Meses Grátis!</div>
+            </div>
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
     </section>
 
-    <section id="planos">
+    <section id="planos" class="reveal">
         <h2>Nossos Planos</h2>
         <div class="planos-container">
             <div class="plano">
@@ -49,7 +63,7 @@
         </div>
     </section>
 
-    <section id="beneficios">
+    <section id="beneficios" class="reveal">
         <h2>Por que escolher Stream Vision?</h2>
         <ul>
             <li>Transmissão em Alta Qualidade, sem travamentos.</li>
@@ -58,12 +72,12 @@
         </ul>
     </section>
 
-    <section id="sobre">
+    <section id="sobre" class="reveal">
         <h2>Sobre o Stream Vision</h2>
         <p>Este projeto acadêmico foi desenvolvido para demonstrar como criar uma plataforma de IPTV focada na experiência do usuário, utilizando técnicas de design que garantem acessibilidade, clareza e ausência de vieses manipulatórios.</p>
     </section>
 
-    <section id="contato">
+    <section id="contato" class="reveal">
         <h2>Contato</h2>
         <form id="contato-form">
             <label for="nome">Nome:</label>
