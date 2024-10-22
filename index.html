@@ -1,69 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stream Vision - Planos IPTV Promocionais</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Stream Vision</h1>
-        <p>Experimente a melhor plataforma de IPTV, agora mais acessível e moderna!</p>
-        <nav>
-            <ul>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="#beneficios">Benefícios</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="slider">
-        <div class="slider-container">
-            <div class="slide fade">
-                <img src="https://via.placeholder.com/1000x400?text=Entretenimento+em+Alta+Definição" alt="Entretenimento em Alta Definição">
-                <div class="text">Assine agora e tenha 20% de desconto! Últimas vagas disponíveis.</div>
-            </div>
-            <div class="slide fade">
-                <img src="https://via.placeholder.com/1000x400?text=Teste+Grátis+por+7+Dias" alt="Teste Grátis por 7 Dias">
-                <div class="text">Experimente a nossa plataforma sem compromisso!</div>
-            </div>
+<section id="slider">
+    <div class="slider-container">
+        <div class="slide fade">
+            <img src="https://via.placeholder.com/1000x400?text=Entretenimento+em+Alta+Definição" alt="Entretenimento em Alta Definição">
+            <div class="text">Assine agora e tenha 20% de desconto! Últimas vagas disponíveis.</div>
         </div>
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    </section>
+        <div class="slide fade">
+            <img src="https://via.placeholder.com/1000x400?text=Teste+Grátis+por+7+Dias" alt="Teste Grátis por 7 Dias">
+            <div class="text">Experimente a nossa plataforma sem compromisso!</div>
+        </div>
+        <div class="slide fade">
+            <img src="https://via.placeholder.com/1000x400?text=Plano+Anual+com+2+Meses+Grátis" alt="Plano Anual com 2 Meses Grátis">
+            <div class="text">Aproveite nossos planos anuais com descontos exclusivos!</div>
+        </div>
+    </div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</section>
 
-    <section id="sobre" class="reveal">
-        <h2>Sobre o Stream Vision</h2>
-        <p>Este projeto acadêmico foi desenvolvido para demonstrar como criar uma plataforma de IPTV focada na experiência do usuário, utilizando técnicas de design que garantem acessibilidade, clareza e ausência de vieses manipulatórios.</p>
-    </section>
+<section id="sobre" class="reveal">
+    <h2>Sobre o Stream Vision</h2>
+    <p>Este projeto acadêmico foi desenvolvido para demonstrar como criar uma plataforma de IPTV focada na experiência do usuário, utilizando técnicas de design que garantem acessibilidade, clareza e ausência de vieses manipulatórios.</p>
+</section>
 
-    <section id="contato" class="reveal">
-        <h2>Contato</h2>
-        <form id="contato-form">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-            
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-        <p>Ou envie um e-mail para <a href="mailto:exemplo@email.com">exemplo@email.com</a>.</p>
-    </section>
+<section id="contato" class="reveal">
+    <h2>Contato</h2>
+    <form id="contato-form">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+    <p>Ou envie um e-mail para <a href="mailto:exemplo@email.com">exemplo@email.com</a>.</p>
+</section>
 
-    <footer>
-        <p>&copy; 2024 Stream Vision. Todos os direitos reservados. Este site é apenas para fins acadêmicos.</p>
-    </footer>
+<footer>
+    <p>&copy; 2024 Stream Vision. Todos os direitos reservados. Este site é apenas para fins acadêmicos.</p>
+</footer>
 
-    <!-- Aqui você refere ao arquivo script.js -->
-    <script src="script.js"></script>
-</body>
-</html>
+<script src="script.js"></script>
