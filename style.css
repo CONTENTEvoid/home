@@ -68,25 +68,6 @@ nav ul li a {
     border: 2px solid #5DADE2;
 }
 
-button {
-    background-color: #5DADE2;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #004085;
-}
-
-footer {
-    margin-top: 20px;
-    background-color: #343a40;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
 form {
     max-width: 400px;
     margin: 0 auto;
@@ -118,3 +99,10 @@ form button:hover {
     background-color: #004085;
 }
 
+footer {
+    margin-top: 20px;
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
