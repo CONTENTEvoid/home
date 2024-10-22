@@ -49,18 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex - 1].style.display = "block";
     };
 
-    // Garantir que as imagens dos slides sejam carregadas
-    const slideImages = document.querySelectorAll(".slide img");
-    slideImages.forEach((img) => {
-        img.addEventListener("error", function() {
-            console.error("Erro ao carregar a imagem: ", img.src);
-            img.style.display = "none";
-        });
-        img.addEventListener("load", function() {
-            img.style.display = "block";
-        });
-    });
-
     // Efeito de Fade In
     document.body.style.opacity = 0;
     document.body.style.transition = "opacity 1.5s ease";
@@ -68,5 +56,5 @@ document.addEventListener("DOMContentLoaded", function() {
         document.body.style.opacity = 1;
     });
 
-    // Outras animações e funcionalidades adicionais foram colocadas no script para interação avançada, como digitação no título, carrossel automático, parallax, animação ao rolar, modal para promoções especiais, contagem regressiva, e confete ao finalizar a compra. Todos esses efeitos fazem parte do arquivo `script.js` para que o HTML fique mais limpo e organizado.
+    // Outros efeitos e animações...
 });
