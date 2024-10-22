@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
         slideIndex++;
         if (slideIndex > slides.length) { slideIndex = 1 }
         slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 5000); // Muda a cada 5 segundos
+        setTimeout(showSlides, 5000);
     }
 
     window.changeSlide = function(n) {
@@ -60,38 +60,12 @@ document.addEventListener("DOMContentLoaded", function() {
         slides[slideIndex - 1].style.display = "block";
     };
 
-    // Animações de Hover e Transições
-    const buttons = document.querySelectorAll("button");
-
-    buttons.forEach(button => {
-        button.addEventListener("mouseover", function() {
-            button.style.transition = "all 0.3s ease";
-            button.style.transform = "translateY(-5px)";
-        });
-
-        button.addEventListener("mouseout", function() {
-            button.style.transform = "translateY(0)";
-        });
-    });
-
-    // Efeito de Zoom em Imagens no Slider
-    const sliderImages = document.querySelectorAll(".slider-container img");
-
-    sliderImages.forEach(image => {
-        image.addEventListener("mouseover", function() {
-            image.style.transition = "transform 0.5s ease";
-            image.style.transform = "scale(1.05)";
-        });
-
-        image.addEventListener("mouseout", function() {
-            image.style.transform = "scale(1)";
-        });
-    });
-
     // Carregamento de Página com Fade In
     document.body.style.opacity = 0;
     document.body.style.transition = "opacity 1.5s ease";
     window.addEventListener("load", function() {
         document.body.style.opacity = 1;
     });
+
+    revealOnScroll();
 });
