@@ -40,6 +40,17 @@ window.changeSlide = function(n) {
     slides[slideIndex - 1].style.display = "block";
 };
 
+// Garantir que as imagens dos slides sejam carregadas
+const slideImages = document.querySelectorAll(".slide img");
+slideImages.forEach((img) => {
+    img.addEventListener("error", function() {
+        img.style.display = "none";
+    });
+    img.addEventListener("load", function() {
+        img.style.display = "block";
+    });
+});
+
 // Efeito de Fade In
 document.body.style.opacity = 0;
 document.body.style.transition = "opacity 1.5s ease";
