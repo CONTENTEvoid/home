@@ -76,4 +76,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         type();
     }
+
+    // Efeito de Carrossel Automático
+    const carrosselItems = document.querySelectorAll(".carrossel-item");
+    let carrosselIndex = 0;
+    function showCarrosselItem() {
+        carrosselItems.forEach(item => item.classList.remove("active"));
+        carrosselItems[carrosselIndex].classList.add("active");
+        carrosselIndex++;
+        if (carrosselIndex >= carrosselItems.length) {
+            carrosselIndex = 0;
+        }
+        setTimeout(showCarrosselItem, 3000);
+    }
+    if (carrosselItems.length > 0) {
+        showCarrosselItem();
+    }
 });
