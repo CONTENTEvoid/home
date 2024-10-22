@@ -168,3 +168,25 @@ smoothScrollLinks.forEach(link => {
         }
     });
 });
+
+// Efeito de Confete ao Finalizar Compra
+const confettiButton = document.getElementById("confetti-button");
+if (confettiButton) {
+    confettiButton.addEventListener("click", function() {
+        for (let i = 0; i < 150; i++) {
+            createConfetti();
+        }
+    });
+}
+
+function createConfetti() {
+    const confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    document.body.appendChild(confetti);
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+    setTimeout(() => {
+        confetti.remove();
+    }, 5000);
+}
