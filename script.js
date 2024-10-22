@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
         setTimeout(showSlides, 5000);
     }
     showSlides();
-
     window.changeSlide = function(n) {
         slideIndex += n;
         const slides = document.getElementsByClassName("slide");
@@ -47,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("load", function() {
         document.body.style.opacity = 1;
     });
-
     // Efeito de Digitação no Título
     const typedText = document.querySelector(".typed-text");
     if (typedText) {
@@ -76,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         type();
     }
-
     // Efeito de Carrossel Automático
     const carrosselItems = document.querySelectorAll(".carrossel-item");
     let carrosselIndex = 0;
