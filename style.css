@@ -1,40 +1,52 @@
 body {
-font-family: Arial, sans-serif;
-background-color: #D5D8DC;
+font-family: 'Poppins', sans-serif;
+background-color: #f0f0f0;
 color: #333;
 margin: 0;
 padding: 0;
 }
 
 header {
-background-color: #5DADE2;
+background: linear-gradient(135deg, #003366, #006699);
 color: white;
-padding: 20px;
+padding: 40px;
 text-align: center;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 2px;
 }
 
 nav ul {
 list-style: none;
 padding: 0;
 text-align: center;
+margin-top: 20px;
 }
 
 nav ul li {
 display: inline;
-margin: 0 15px;
+margin: 0 20px;
 }
 
 nav ul li a {
 color: white;
 text-decoration: none;
 font-weight: bold;
+transition: color 0.3s;
+}
+
+nav ul li a {
+color: #ffcc00;
 }
 
 /* Slider */
 .slider-container {
 position: relative;
-max-width: 800px;
-margin: 20px auto;
+max-width: 1000px;
+margin: 40px auto;
+border-radius: 15px;
+overflow: hidden;
+box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .slide {
@@ -43,18 +55,17 @@ display: none;
 
 img {
 width: 100%;
-border-radius: 10px;
 }
 
 .text {
 color: #fff;
-font-size: 1.5em;
-padding: 8px 12px;
+font-size: 2em;
+padding: 20px;
 position: absolute;
-bottom: 20px;
-left: 20px;
+bottom: 30px;
+left: 30px;
 background-color: rgba(0, 0, 0, 0.5);
-border-radius: 5px;
+border-radius: 10px;
 }
 
 .prev, .next {
@@ -66,17 +77,18 @@ margin-top: -22px;
 padding: 16px;
 color: white;
 font-weight: bold;
-font-size: 24px;
-border-radius: 0 3px 3px 0;
+font-size: 30px;
+border-radius: 50%;
 background-color: rgba(0, 0, 0, 0.5);
+transition: background-color 0.3s;
 }
 
 .prev {
-left: 0;
+left: 20px;
 }
 
 .next {
-right: 0;
+right: 20px;
 }
 
 .prev, .next {
@@ -85,63 +97,65 @@ background-color: rgba(0, 0, 0, 0.8);
 
 /* Botões Interativos */
 button {
-background-color: #5DADE2;
+background: linear-gradient(135deg, #006699, #0099cc);
 color: white;
 border: none;
-padding: 10px;
+padding: 15px 25px;
 cursor: pointer;
 transition: transform 0.3s, box-shadow 0.3s;
-border-radius: 8px;
+border-radius: 30px;
+font-size: 1em;
+text-transform: uppercase;
+letter-spacing: 1px;
 }
 
 button {
-background-color: #004085;
-transform: scale(1.05);
-box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+transform: scale(1.1);
+box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 button {
-transform: scale(0.95);
-box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+transform: scale(1);
+box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Formulário de Contato */
 form {
-max-width: 400px;
-margin: 0 auto;
+max-width: 600px;
+margin: 40px auto;
 text-align: left;
+background: white;
+padding: 20px;
+border-radius: 15px;
+box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 form label {
 display: block;
 margin: 10px 0 5px;
+font-weight: bold;
 }
 
 form input, form textarea {
 width: 100%;
-padding: 8px;
-margin-bottom: 10px;
+padding: 12px;
+margin-bottom: 20px;
 border: 1px solid #ccc;
-border-radius: 4px;
+border-radius: 8px;
+font-size: 1em;
 }
 
 form button {
-background-color: #5DADE2;
-color: white;
-border: none;
-padding: 10px 15px;
-cursor: pointer;
-}
-
-form button {
-background-color: #004085;
+display: block;
+width: 100%;
+font-size: 1.2em;
 }
 
 /* Animações de Rolagem */
 .reveal {
 opacity: 0;
-transform: translateY(20px);
-transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+transform: translateY(40px);
+transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 .reveal.active {
@@ -150,10 +164,12 @@ transform: translateY(0);
 }
 
 footer {
-margin-top: 20px;
-background-color: #343a40;
+margin-top: 40px;
+background: linear-gradient(135deg, #003366, #006699);
 color: white;
-padding: 10px 0;
+padding: 20px;
 text-align: center;
+font-size: 0.9em;
+letter-spacing: 1px;
 }
 
