@@ -1,124 +1,215 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stream Vision - Planos IPTV Promocionais</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>Stream Vision</h1>
-        <p>Experimente a melhor plataforma de IPTV, agora mais acessível e moderna!</p>
-        <nav>
-            <ul>
-                <li><a href="#planos">Planos</a></li>
-                <li><a href="#beneficios">Benefícios</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    
+    const nome = document.getElementById("nome").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensagem = document.getElementById("mensagem").value.trim();
 
-    <section id="slider">
-        <div class="slider-container">
-            <div class="slide fade">
-                <img src="https://via.placeholder.com/1000x400?text=Entretenimento+em+Alta+Definição" alt="Entretenimento em Alta Definição">
-                <div class="text">Assine agora e tenha 20% de desconto! Últimas vagas disponíveis.</div>
-            </div>
-            <div class="slide fade">
-                <img src="https://via.placeholder.com/1000x400?text=Teste+Grátis+por+7+Dias" alt="Teste Grátis por 7 Dias">
-                <div class="text">Experimente a nossa plataforma sem compromisso!</div>
-            </div>
-            <div class="slide fade">
-                <img src="https://via.placeholder.com/1000x400?text=Plano+Anual+com+2+Meses+Grátis" alt="Plano Anual com 2 Meses Grátis">
-                <div class="text">Aproveite nossos planos anuais com descontos exclusivos!</div>
-            </div>
+    if (nome === "" || email === "" || mensagem === "") {
+        alert("Por favor, preencha todos os campos antes de enviar.");
+    } else {
+        alert("Mensagem enviada com sucesso! Agradecemos o seu contato.");
+        form.reset();
+    }
+});
+
+<section id="slider">
+    <div class="slider-container">
+        <div class="slide fade">
+            <img src="https://via.placeholder.com/1000x400?text=Entretenimento+em+Alta+Definição" alt="Entretenimento em Alta Definição">
+            <div class="text">Assine agora e tenha 20% de desconto! Últimas vagas disponíveis.</div>
         </div>
-        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-        <a class="next" onclick="changeSlide(1)">&#10095;</a>
-    </section>
-
-    <section id="planos" class="reveal">
-        <h2>Nossos Planos</h2>
-        <div class="planos-container">
-            <div class="plano">
-                <h3>Plano Mensal</h3>
-                <p>R$ 29,90/mês</p>
-                <p>Cancelamento fácil, sem fidelidade.</p>
-                <button>Assinar Agora</button>
-            </div>
-            <div class="plano destaque">
-                <div class="ribbon">Mais Popular</div>
-                <h3>Plano Semestral</h3>
-                <p>R$ 149,90/6 meses</p>
-                <p>Economize 15%. Ideal para quem quer estabilidade.</p>
-                <button>Assinar Agora</button>
-            </div>
-            <div class="plano">
-                <h3>Plano Anual</h3>
-                <p>R$ 279,90/ano</p>
-                <p>Economize 20%. Mais vantagens para você!</p>
-                <button>Assinar Agora</button>
-            </div>
+        <div class="slide fade">
+            <img src="https://via.placeholder.com/1000x400?text=Teste+Grátis+por+7+Dias" alt="Teste Grátis por 7 Dias">
+            <div class="text">Experimente a nossa plataforma sem compromisso!</div>
         </div>
-    </section>
-
-    <section id="beneficios" class="reveal">
-        <h2>Por que escolher Stream Vision?</h2>
-        <ul>
-            <li><img src="https://via.placeholder.com/50" alt="Qualidade"> Transmissão em Alta Qualidade, sem travamentos.</li>
-            <li><img src="https://via.placeholder.com/50" alt="Suporte"> Suporte Técnico 24/7, focado em sua experiência.</li>
-            <li><img src="https://via.placeholder.com/50" alt="Acesso"> Acesso a qualquer hora, em qualquer dispositivo.</li>
-        </ul>
-    </section>
-
-    <section id="depoimentos" class="reveal">
-        <h2>O que nossos clientes dizem</h2>
-        <div class="depoimentos-container">
-            <div class="depoimento">
-                <p>"Stream Vision me surpreendeu! Qualidade incrível e atendimento excelente."</p>
-                <h4>- Maria S.</h4>
-            </div>
-            <div class="depoimento">
-                <p>"A melhor experiência em IPTV que já tive. Super recomendo!"</p>
-                <h4>- João F.</h4>
-            </div>
-            <div class="depoimento">
-                <p>"Fácil de usar, ótimo custo-benefício e muitas opções de canais."</p>
-                <h4>- Ana P.</h4>
-            </div>
+        <div class="slide fade">
+            <img src="https://via.placeholder.com/1000x400?text=Plano+Anual+com+2+Meses+Grátis" alt="Plano Anual com 2 Meses Grátis">
+            <div class="text">Aproveite nossos planos anuais com descontos exclusivos!</div>
         </div>
-    </section>
+    </div>
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+</section>
 
-    <section id="sobre" class="reveal">
-        <h2>Sobre o Stream Vision</h2>
-        <p>Este projeto acadêmico foi desenvolvido para demonstrar como criar uma plataforma de IPTV focada na experiência do usuário, utilizando técnicas de design que garantem acessibilidade, clareza e ausência de vieses manipulatórios.</p>
-    </section>
+}
+showSlides();
 
-    <section id="contato" class="reveal">
-        <h2>Contato</h2>
-        <form id="contato-form">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-            
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-            
-            <button type="submit">Enviar Mensagem</button>
-        </form>
-        <p>Ou envie um e-mail para <a href="mailto:exemplo@email.com">exemplo@email.com</a>.</p>
-    </section>
+window.changeSlide = function(n) {
+    slideIndex += n;
+    const slides = document.getElementsByClassName("slide");
+    if (slides.length === 0) {
+        console.error("Nenhum slide encontrado.");
+        return;
+    }
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    if (slideIndex < 1) { slideIndex = slides.length }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+};
 
-    <footer>
-        <p>&copy; 2024 Stream Vision. Todos os direitos reservados. Este site é apenas para fins acadêmicos.</p>
-    </footer>
+// Garantir que as imagens dos slides sejam carregadas
+const slideImages = document.querySelectorAll(".slide img");
+slideImages.forEach((img) => {
+    img.addEventListener("error", function() {
+        console.error("Erro ao carregar a imagem: ", img.src);
+        img.style.display = "none";
+    });
+    img.addEventListener("load", function() {
+        img.style.display = "block";
+    });
+});
 
-    <script src="script.js"></script>
-</body>
-</html>
+// Efeito de Fade In
+document.body.style.opacity = 0;
+document.body.style.transition = "opacity 1.5s ease";
+window.addEventListener("load", function() {
+    document.body.style.opacity = 1;
+});
+
+// Efeito de Digitação no Título
+const typedText = document.querySelector(".typed-text");
+if (typedText) {
+    const textArray = typedText.getAttribute("data-text").split(",");
+    let arrayIndex = 0;
+    let charIndex = 0;
+    function type() {
+        if (charIndex < textArray[arrayIndex].length) {
+            typedText.textContent += textArray[arrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 150);
+        } else {
+            setTimeout(erase, 2000);
+        }
+    }
+    function erase() {
+        if (charIndex > 0) {
+            typedText.textContent = textArray[arrayIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 100);
+        } else {
+            arrayIndex++;
+            if (arrayIndex >= textArray.length) arrayIndex = 0;
+            setTimeout(type, 1500);
+        }
+    }
+    type();
+}
+
+// Efeito de Carrossel Automático
+const carrosselItems = document.querySelectorAll(".carrossel-item");
+let carrosselIndex = 0;
+function showCarrosselItem() {
+    if (carrosselItems.length === 0) return;
+    carrosselItems.forEach(item => item.classList.remove("active"));
+    carrosselItems[carrosselIndex].classList.add("active");
+    carrosselIndex++;
+    if (carrosselIndex >= carrosselItems.length) {
+        carrosselIndex = 0;
+    }
+    setTimeout(showCarrosselItem, 3000);
+}
+showCarrosselItem();
+
+// Efeito de Parallax em imagens de fundo
+window.addEventListener("scroll", function() {
+    const parallaxElements = document.querySelectorAll(".parallax");
+    parallaxElements.forEach(element => {
+        let speed = element.getAttribute("data-speed");
+        element.style.transform = `translateY(${window.scrollY * speed}px)`;
+    });
+});
+
+// Animação ao Rolar
+const revealElements = document.querySelectorAll(".reveal");
+function revealOnScroll() {
+    const windowHeight = window.innerHeight;
+    revealElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const revealPoint = 150;
+        if (elementTop < windowHeight - revealPoint) {
+            element.classList.add("active");
+        }
+    });
+}
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+
+// Adição de Modal para Promoções Especiais
+const modal = document.getElementById("promo-modal");
+const closeModalButton = document.getElementById("close-modal");
+
+if (modal && closeModalButton) {
+    setTimeout(function() {
+        modal.style.display = "block";
+    }, 7000); // Mostrar modal após 7 segundos
+
+    closeModalButton.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+}
+
+// Efeito de Contagem Regressiva para Promoções
+const countdownElement = document.getElementById("countdown");
+if (countdownElement) {
+    let countdownTime = 60 * 5; // 5 minutos em segundos
+
+    function updateCountdown() {
+        const minutes = Math.floor(countdownTime / 60);
+        const seconds = countdownTime % 60;
+        countdownElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        countdownTime--;
+        if (countdownTime >= 0) {
+            setTimeout(updateCountdown, 1000);
+        } else {
+            countdownElement.textContent = "Promoção Expirada!";
+        }
+    }
+    updateCountdown();
+}
+
+// Animação de Scroll Suave para Links Internos
+const smoothScrollLinks = document.querySelectorAll("a[href^='#']");
+smoothScrollLinks.forEach(link => {
+    link.addEventListener("click", function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+            });
+        }
+    });
+});
+
+// Efeito de Confete ao Finalizar Compra
+const confettiButton = document.getElementById("confetti-button");
+if (confettiButton) {
+    confettiButton.addEventListener("click", function() {
+        for (let i = 0; i < 150; i++) {
+            createConfetti();
+        }
+    });
+}
+
+function createConfetti() {
+    const confetti = document.createElement("div");
+    confetti.classList.add("confetti");
+    document.body.appendChild(confetti);
+    confetti.style.left = Math.random() * 100 + "vw";
+    confetti.style.animationDuration = Math.random() * 3 + 2 + "s";
+
+    setTimeout(() => {
+        confetti.remove();
+    }, 5000);
+}
