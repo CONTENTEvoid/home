@@ -1,71 +1,62 @@
+/* Arquivo CSS (style.css) */
 body {
 font-family: 'Montserrat', sans-serif;
 background-color: #f0f0f0;
 color: #333;
 margin: 0;
 padding: 0;
+transition: opacity 1.5s ease;
 }
 
 header {
-background: linear-gradient(135deg, #003366, #006699);
+background: linear-gradient(to right, #0056b3, #004080);
 color: white;
-padding: 40px;
+padding: 20px;
 text-align: center;
-font-weight: bold;
-text-transform: uppercase;
-letter-spacing: 2px;
 }
 
-nav ul {
-list-style: none;
+header nav ul {
+list-style-type: none;
 padding: 0;
-text-align: center;
-margin-top: 20px;
 }
 
-nav ul li {
+header nav ul li {
 display: inline;
-margin: 0 20px;
+margin: 0 15px;
 }
 
-nav ul li a {
-color: white;
+header nav ul li a {
+color: #ffc107;
 text-decoration: none;
 font-weight: bold;
-transition: color 0.3s;
 }
 
-nav ul li a {
-color: #ffcc00;
-}
-
-/* Slider */
 .slider-container {
 position: relative;
 max-width: 1000px;
-margin: 40px auto;
-border-radius: 15px;
+margin: auto;
 overflow: hidden;
-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .slide {
 display: none;
 }
 
-img {
+.slide img {
 width: 100%;
+height: auto;
 }
 
 .text {
-color: #fff;
-font-size: 2em;
-padding: 20px;
 position: absolute;
 bottom: 30px;
 left: 30px;
-background-color: rgba(0, 0, 0, 0.5);
-border-radius: 10px;
+color: #fff;
+background: rgba(0, 0, 0, 0.5);
+padding: 10px;
+border-radius: 5px;
 }
 
 .prev, .next {
@@ -77,122 +68,82 @@ margin-top: -22px;
 padding: 16px;
 color: white;
 font-weight: bold;
-font-size: 30px;
-border-radius: 50%;
-background-color: rgba(0, 0, 0, 0.5);
-transition: background-color 0.3s;
-}
-
-.prev {
-left: 20px;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
 }
 
 .next {
-right: 20px;
+right: 0;
+border-radius: 3px 0 0 3px;
 }
 
-.prev, .next {
-background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Botões Interativos */
-button {
-background: linear-gradient(135deg, #006699, #0099cc);
-color: white;
-border: none;
-padding: 15px 25px;
-cursor: pointer;
-transition: transform 0.3s, box-shadow 0.3s;
-border-radius: 30px;
-font-size: 1em;
-text-transform: uppercase;
-letter-spacing: 1px;
-}
-
-button {
-transform: scale(1.1);
-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-button {
-transform: scale(1);
-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Formulário de Contato */
-form {
-max-width: 600px;
-margin: 40px auto;
-text-align: left;
-background: white;
-padding: 20px;
-border-radius: 15px;
-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-display: block;
-margin: 10px 0 5px;
-font-weight: bold;
-}
-
-form input, form textarea {
-width: 100%;
-padding: 12px;
-margin-bottom: 20px;
-border: 1px solid #ccc;
-border-radius: 8px;
-font-size: 1em;
-}
-
-form button {
-display: block;
-width: 100%;
-font-size: 1.2em;
-}
-
-/* Animações de Rolagem */
 .reveal {
 opacity: 0;
-transform: translateY(40px);
-transition: opacity 1s ease-out, transform 1s ease-out;
+transition: opacity 0.5s ease;
 }
 
 .reveal.active {
 opacity: 1;
-transform: translateY(0);
 }
 
 footer {
-margin-top: 40px;
-background: linear-gradient(135deg, #003366, #006699);
-color: white;
-padding: 20px;
+background: #333;
+color: #fff;
 text-align: center;
-font-size: 0.9em;
-letter-spacing: 1px;
+padding: 15px 0;
+margin-top: 20px;
 }
 
-/* Estilo para a seção de depoimentos */
-.depoimentos-container {
-max-width: 1000px;
-margin: 40px auto;
-display: flex;
-justify-content: space-between;
-gap: 20px;
+/* Botão do formulário de contato */
+button[type="submit"] {
+background-color: #0056b3;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s;
 }
 
-.depoimento {
-background: white;
+button[type="submit"] {
+background-color: #003d80;
+}
+
+/* Modal para promoções */
+#promo-modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+overflow: auto;
+background-color: rgba(0,0,0,0.7);
+padding-top: 60px;
+}
+
+#promo-modal-content {
+background-color: #fefefe;
+margin: auto;
 padding: 20px;
-border-radius: 15px;
-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
-flex: 1;
+border: 1px solid #888;
+width: 80%;
+border-radius: 10px;
 }
 
-.depoimento h4 {
-margin-top: 15px;
+#close-modal {
+color: #aaa;
+float: right;
+font-size: 28px;
 font-weight: bold;
-color: #006699;
 }
 
+#close-modal,
+#close-modal {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
