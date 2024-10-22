@@ -87,5 +87,11 @@ document.addEventListener("DOMContentLoaded", function() {
             image.style.transform = "scale(1)";
         });
     });
-});
 
+    // Carregamento de Página com Fade In
+    document.body.style.opacity = 0;
+    document.body.style.transition = "opacity 1.5s ease";
+    window.addEventListener("load", function() {
+        document.body.style.opacity = 1;
+    });
+});
