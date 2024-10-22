@@ -133,3 +133,22 @@ if (modal && closeModalButton) {
         }
     });
 }
+
+// Efeito de Contagem Regressiva para Promoções
+const countdownElement = document.getElementById("countdown");
+if (countdownElement) {
+    let countdownTime = 60 * 5; // 5 minutos em segundos
+
+    function updateCountdown() {
+        const minutes = Math.floor(countdownTime / 60);
+        const seconds = countdownTime % 60;
+        countdownElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        countdownTime--;
+        if (countdownTime >= 0) {
+            setTimeout(updateCountdown, 1000);
+        } else {
+            countdownElement.textContent = "Promoção Expirada!";
+        }
+    }
+    updateCountdown();
+}
