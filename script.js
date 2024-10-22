@@ -152,3 +152,19 @@ if (countdownElement) {
     }
     updateCountdown();
 }
+
+// Animação de Scroll Suave para Links Internos
+const smoothScrollLinks = document.querySelectorAll("a[href^='#']");
+smoothScrollLinks.forEach(link => {
+    link.addEventListener("click", function(event) {
+        event.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+            });
+        }
+    });
+});
