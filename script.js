@@ -17,6 +17,7 @@ form.addEventListener("submit", function(event) {
 let slideIndex = 0;
 function showSlides() {
     const slides = document.getElementsByClassName("slide");
+    if (slides.length === 0) return;
     for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
@@ -30,6 +31,7 @@ showSlides();
 window.changeSlide = function(n) {
     slideIndex += n;
     const slides = document.getElementsByClassName("slide");
+    if (slides.length === 0) return;
     if (slideIndex > slides.length) { slideIndex = 1 }
     if (slideIndex < 1) { slideIndex = slides.length }
     for (let i = 0; i < slides.length; i++) {
@@ -78,6 +80,7 @@ if (typedText) {
 const carrosselItems = document.querySelectorAll(".carrossel-item");
 let carrosselIndex = 0;
 function showCarrosselItem() {
+    if (carrosselItems.length === 0) return;
     carrosselItems.forEach(item => item.classList.remove("active"));
     carrosselItems[carrosselIndex].classList.add("active");
     carrosselIndex++;
@@ -86,9 +89,7 @@ function showCarrosselItem() {
     }
     setTimeout(showCarrosselItem, 3000);
 }
-if (carrosselItems.length > 0) {
-    showCarrosselItem();
-}
+showCarrosselItem();
 
 // Efeito de Parallax em imagens de fundo
 window.addEventListener("scroll", function() {
